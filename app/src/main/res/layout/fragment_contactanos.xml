@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_contactanos">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="CONTACTANOS"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageButton
+        android:id="@+id/whasaap"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="136dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_whaasap_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/facebook" />
+
+    <ImageButton
+        android:id="@+id/facebook"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="132dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_facebook_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/instagram"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="132dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_instagram_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="0.5dp"
+        app:cardElevation="0.5dp"
+        app:layout_constraintBottom_toTopOf="@+id/whasaap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
